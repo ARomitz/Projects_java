@@ -1,0 +1,45 @@
+import prog.io.*;
+import prog.utili.Data;
+import prog.utili.MeseDellAnno;
+public class GiorniMancanti {
+    public static void main(String[] args) {
+        ConsoleInputManager in = new ConsoleInputManager();
+        ConsoleOutputManager out = new ConsoleOutputManager();
+
+        Data oggi = new Data();
+        MeseDellAnno MeseDellAnno = oggi.getMeseDellAnno();
+
+        int giorniNelMese = mese.numeroGiorni(oggi.getAnno());
+        int GiorniAFineMese = giorniNelMese - oggi.getGiorno();
+        int GiorniAFineAnno = GiorniAFineMese;
+
+        switch (mese.successivo()) {
+            case Febbraio:
+            GiorniAFineAnno += oggi.isInAnnoBisestile() ? 29 : 28;
+            case MARZO:
+            GiorniAFineAnno += 31;
+            case APRILE:
+            GiorniAFineAnno += 30;
+            case MAGGIO:
+            GiorniAFineAnno += 31;
+            case GIUGNO:
+            GiorniAFineAnno += 30;
+            case LUGLIO:
+            GiorniAFineAnno += 31;
+            case GIUGNO:
+            GiorniAFineAnno += 30;
+            case AGOSTO:
+            GiorniAFineAnno += 31;
+            case SETTEMBRE:
+            GiorniAFineAnno += 30;
+            case OTTOBRE:
+            GiorniAFineAnno += 31;
+            case NOVEMBRE:
+            GiorniAFineAnno += 30;
+            case DICEMBRE:
+            GiorniAFineAnno += 31;
+        }
+        out.print("mancano" + giorniNelMese + "giorni alla fine del mese");
+        out.print(" e " + GiorniAFineAnno + " alla fine dell'anno");
+    }
+}

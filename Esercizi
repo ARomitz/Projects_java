@@ -1,0 +1,29 @@
+public class Esercizi {
+    /*Per ognuno dei seguenti assegnamenti scrivete delle dichiarazioni per le variabili che vi compaiono,
+     *  cos'i che essi risultino correttidal punto di vista dei tipi; se cio non fosse possibile, spiega il motivo
+     */
+
+     x = (y-- > 4) && !z; x boolean, y int, z boolean;
+     x = x == y; x boolean, y boolean;
+     x = x == 1; impossibile non si puo assegnare un numero a boolean;
+     x = x = 1; x int;
+     x = !x; x boolean;
+     x = x = x; x any variable;
+     x = x == x; x boolean = true;
+     
+     // es 2
+
+     1) x1 = y1 = 0;
+     2) x1 = 3, y1 = 0;
+     3) x1 = 3, y1 = 1;
+
+     int x1,y1;
+     if (x1 <= y1 || (x1 = y++) > 0);
+     x1 = y1;
+
+     1) x1 = 0 y1 = 0;
+     2) x1 = 0 y1 = 1;
+     3) x1 = 2 y1 = 2;
+
+     // es 3
+}

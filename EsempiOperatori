@@ -1,0 +1,43 @@
+public class EsempiOperatori {
+    /**
+     * @param args
+     */
+    public static void main(String[] args) {
+        int i = 4, j = 7;
+
+        j = i + (i = j); //i = 7  j = 4 + 7 = 11
+        j = i + (i = i);
+        j = (i = j) + i;
+        j = i-- + --j;
+        j = i + (j = j + i) + (j = i + 2) + (i = j);
+
+
+
+        int x = 8, y = 9;
+        boolean b;
+
+        x = y; //tipo int  x = 9  y = 9
+        x == y;//tipo boolean false  x = 8  y = 9 
+        x != y;//tipo boolean true  x = 8  y = 9
+        ++x == --y;//tipo boolean false
+        ++x == y--;//tipo boolean true
+        x++ == --y;//tipo boolean true
+        x++ == y--;//tipo boolean false
+
+
+
+        int c =;
+        c = x == y ? x++ : --y;
+        cond false --> c = 8   x = 8  y = 8;
+
+
+        c = x != y ? x++ : --y;
+        cond true --> c = 8  x = 9  y = 9;
+
+        
+
+
+
+    }
+    
+}

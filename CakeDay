@@ -1,0 +1,38 @@
+import prog.io.*;
+import prog.utili.Data;
+import prog.utili.GiornoDellaSettimana;
+import prog.utili.MeseDellAnno;
+public class CakeDay {
+    /**
+     * @param args
+     */
+    public static void main(String[] args) {
+        ConsoleInputManager in = new ConsoleInputManager();
+        ConsoleOutputManager out = new ConsoleOutputManager();
+
+        int giorno = in.readInt("Inserisci giorno ");
+        int mese = in.readInt("Inserisci mese ");
+        int anno = in.readInt("Inserisci anno ");
+
+        Data nascita = new Data(giorno,mese,anno);
+        Data oggi = new Data();
+
+        GiornoDellaSettimana giornosett1 = nascita.getGiornoDellaSettimana();
+        MeseDellAnno meseanno = nascita.getMeseDellAnno();
+
+        GiornoDellaSettimana giornosett2 = oggi.getGiornoDellaSettimana();
+        MeseDellAnno meseAnno2 = oggi.getMeseDellAnno();
+
+        int giorno2 = oggi.getGiorno();
+        int mese2 = oggi.getMese();
+        int anno2 = oggi.getAnno();
+
+        int diff = nascita.quantoManca(oggi);
+
+        out.print(" Data di nascita " + giornosett1.toString() + " " + giorno + " " + mese + " " + anno);
+        out.print(" Data di oggi " + giornosett2.toString() + " " + giorno2 + " " + mese2 + " " + anno2);
+        out.print(" Differenza rispetto a oggi " + diff + " giorni");
+
+        
+    }
+}
